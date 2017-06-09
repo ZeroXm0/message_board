@@ -1,6 +1,6 @@
 <?php
 session_start();
-    $Host = '127.0.0.1';
+    $Host = 'localhost';
     $Database = 'message_board';
     $User = 'root';
     $Password = 'root';
