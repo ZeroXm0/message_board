@@ -60,13 +60,13 @@ if($_POST){
         }
             echo "<script>alert('敏感词添加成功，走！去灌水~');</script>";
     }else if($_POST['key']){//删除敏感词
-        $ln=$POST['key'];//需要删除的那一行内容
+        $ln=$_POST['key'];//需要删除的那一行内容
         //开始处理
         $arr=file($filename);//获取文件所有内容 
         $file=fopen($filename,'w');
-        foreach ($arr as $line){
-            if ($line <> $ln){//不等于
-                fputs($filename, $line); 
+        for($i = 0;$i<count($arr);$i++){
+            if ($i != $ln){//不等于时写入文件
+                fputs($file, $arr[$i]); 
             }
         }
     }
