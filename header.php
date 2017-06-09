@@ -145,6 +145,5 @@
     if($_SESSION){
             echo "<li><a class='btn' href='./loginout.php'>注销</a></li>";
     }
+    echo "</ul></div>";
 ?>
-        </ul>
-    </div>
